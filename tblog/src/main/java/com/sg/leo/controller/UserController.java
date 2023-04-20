@@ -82,4 +82,9 @@ public class UserController {
    size=3, direction=Sort.Direction.DESC, sort= {"id", "username"}) Pageable pageable){
 	   return userRepository.findAll(pageable);
    }
+   
+   @GetMapping("/auth/insertUser")
+   public String insertUser() {
+	   return "insertUser";
+   }
    }
